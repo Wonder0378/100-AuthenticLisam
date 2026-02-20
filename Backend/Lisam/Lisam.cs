@@ -1,6 +1,6 @@
 using Lisam.Models;
 
-namespace Lisam.Context;
+namespace Lisam;
 
 public class LisamBase
 {
