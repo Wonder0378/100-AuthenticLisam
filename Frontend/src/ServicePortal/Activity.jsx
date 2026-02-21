@@ -1,9 +1,26 @@
 import ServiceHeader from "./ServiceHeader";
+import { useEffect } from "react";
+import { getURL, putURL } from './../Server/backendComs'
+import { signIn } from './../Authentication'
 import './css/Activity.css'
 
 function Activity({name}) {
     const thisArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-
+    useEffect(() => {
+    getURL().then(url => {
+        if(name == "Hackathon") {
+            if(url != "/sign-up/Hackathon") {
+                putURL("/sign-up/Hackathon");
+                signIn(); 
+            }
+        } else {
+            if(url != "/sign-up/Alexander") {
+                putURL("/sign-up/Alexander");
+                signIn(); 
+            }
+        }
+        })
+    })
     return (
         <>
             <ServiceHeader owner={"Activities;" + name} subdirectory={true}/>

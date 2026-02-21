@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import './Popup.css'
 import { getURL } from "./Server/backendComs";
 
-
+import { useNavigate } from "react-router-dom";
 
 export default function Captcha() {
+  const navigator = useNavigate();
   const [targetCategory, setTargetCategory] = useState("");
   const [images, setImages] = useState([]);
   const [selectedIndexes, setSelectedIndexes] = useState([]);
@@ -83,7 +84,7 @@ export default function Captcha() {
     if (isCorrect) {
       setMessage("CAPTCHA PASSED!");
       setTimeout(() => {
-        getURL().then(data => window.location.href = data)}, 1000);
+        getURL().then(data => navigator(data))}, 1000);
     } else {
       setMessage("Incorrect! Refreshing...");
       setTimeout(loadCaptcha, 1000);

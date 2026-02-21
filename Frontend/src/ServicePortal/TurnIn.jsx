@@ -1,7 +1,18 @@
+import { useEffect } from "react";
+import { getURL, putURL } from './../Server/backendComs'
+import { signIn } from './../Authentication'
 import ServiceHeader from "./ServiceHeader";
 import './css/TurnIn.css'
 
 function TurnIn() {
+    useEffect(() => {
+        getURL().then(url => {
+            if(url != "/turn-in") {
+            putURL("/turn-in");
+            signIn(); 
+            }
+        })
+    })
     return (
         <>
         <ServiceHeader owner="Assignments"/>

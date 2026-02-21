@@ -7,7 +7,6 @@ import TurnIn from './ServicePortal/TurnIn.jsx'
 import SignUp from './ServicePortal/SignUp.jsx'
 import Activity from './ServicePortal/Activity.jsx'
 import Captcha from './Popup.jsx'
-import Header from './Header.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

@@ -1,4 +1,7 @@
 import ServiceHeader from "./ServiceHeader";
+import { useEffect } from "react";
+import { signIn } from './../Authentication'
+import { getURL, putURL } from './../Server/backendComs'
 import './css/SignUp.css'
 
 const exampleSignUp = [{
@@ -16,6 +19,14 @@ const exampleSignUp = [{
 }]
 
 function SignUp() {
+    useEffect(() => {
+    getURL().then(url => {
+            if(url != "/sign-up") {
+            putURL("/sign-up");
+            signIn(); 
+            }
+        })
+    })
     return (
         <>
         <ServiceHeader owner="Activities"/>
