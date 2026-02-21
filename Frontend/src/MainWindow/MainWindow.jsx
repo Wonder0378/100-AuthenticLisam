@@ -34,8 +34,11 @@ function MainWindow({ setPage}) {
                     <div className="courseObject">
                         <h4>6CDDD - Computer Science and Engineering, M Sc in Engineering</h4>
                     </div>
-                    <div onClick={() => setPage("course")} className="courseObject">
+                    <div className="courseObject">
                         <h4>TDDE68 - Concurrent programming and Operating Systems</h4>
+                    </div>
+                    <div onClick={() => setPage("course")} className="courseObject">
+                        <h4>Haka26 - Webbu Hackathon 2026</h4>
                     </div>
                 </div>
                 <div className="spacer"></div>
