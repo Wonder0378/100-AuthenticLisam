@@ -7,8 +7,22 @@ import Header from './Header.jsx'
 import MainWindow from './MainWindow/MainWindow.jsx'
 import SideBar from './SideBar/SideBar.jsx'
 import TopBar from './TopBar/TopBar.jsx'
+import CourseWindow from './CourseWindow/CourseWindow.jsx'
+
 
 function App() {
+
+  const [page, setPage] = useState("main")
+
+  const renderPage = () => {
+    switch (page) {
+      case "course":
+        return <CourseWindow setPage={setPage} />
+      case "main":
+      default:
+        return <MainWindow setPage={setPage} />
+    }
+  } 
 
   const id = "3fa85f64-5717-4562-b3fc-2c963f66afa6";
 
@@ -19,7 +33,7 @@ function App() {
         <SideBar/>
         <div className="mainWindowAndTop">
           <TopBar/>
-          <MainWindow/>
+          {renderPage()}
         </div>
         
       </div>

@@ -1,6 +1,9 @@
 import './MainWindow.css'
+import { useNavigate } from "react-router-dom"
 
-function MainWindow() {
+function MainWindow({ setPage}) {
+    const navigate = useNavigate();
+
     return (
         <div className='mainWindow'>
             <div className='MainWindowBar'>
@@ -31,7 +34,7 @@ function MainWindow() {
                     <div className="courseObject">
                         <h4>6CDDD - Computer Science and Engineering, M Sc in Engineering</h4>
                     </div>
-                    <div className="courseObject">
+                    <div onClick={() => setPage("course")} className="courseObject">
                         <h4>TDDE68 - Concurrent programming and Operating Systems</h4>
                     </div>
                 </div>
