@@ -121,6 +121,7 @@
 
 h4 {
     padding-left: 5%;
+    cursor: pointer;
 }
 
 h4:hover {
