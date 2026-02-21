@@ -31,8 +31,8 @@ function CourseWindow({ setPage }) {
                         <a href='#'>Schedule</a>
                         <a href='#'>Assessment record</a>
                         <a href='#'>Quiz</a>
-                        <a href='#'>Submissions</a>
-                        <a href='#'>Signup</a>
+                        <a href='/turn-in'>Submissions</a>
+                        <a href='/sign-up'>Signup</a>
                         <a href='#'>Teams</a>
                     </nav>
                 </div>
