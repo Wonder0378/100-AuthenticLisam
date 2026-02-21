@@ -49,6 +49,12 @@ function Activity({name}) {
                                     </tr>
                                 )
                             })}
+                            <tr className="Group">
+                                <td id="btnSignup">
+                                    <button>Signup</button>
+                                    <button>Signup other</button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
