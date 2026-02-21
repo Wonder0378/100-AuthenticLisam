@@ -1,0 +1,69 @@
+.activityContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.activityTitle {
+  font-weight: 300;
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.groups-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.registration-section {
+  margin-bottom: 30px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.date-text {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Den gråa rutan/kortet */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0;
+}
+
+.card-header {
+  background-color: #f5f5f5;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-header h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  color: #444;
+}
+
+.card-body {
+  padding: 15px 20px;
+  display: flex;
+  gap: 400px; /* Justera för att matcha avståndet i bilden */
+}
+
+.info-column .value {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+}
