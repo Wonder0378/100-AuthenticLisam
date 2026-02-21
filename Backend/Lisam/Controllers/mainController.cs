@@ -1,26 +1,28 @@
 using Microsoft.AspNetCore.Mvc;
+using Lisam.Models;
 using Lisam;
+using System.Security.Cryptography.X509Certificates;
+using System.Runtime.CompilerServices;
 
 namespace Lisam.Controllers;
 
 [Route("api/lisam")]
 [ApiController]
-public class MainController(LisamBase lisam) : ControllerBase
+public class MainController(UrlService urlservice) : ControllerBase
 {
-    private readonly LisamBase _lisam = lisam;
 
-    [HttpGet("{id}")]
-	public async Task<IActionResult> GetSomething(String id)
-	{
-        Console.WriteLine(id);
-		// Add your implementation here
-        if(!Guid.TryParse(id, out Guid guidId))
-        {
-            return BadRequest("Provided Id isnt eligible Guid");
-        }
+    private readonly UrlService _urlservice = urlservice;
 
-        Guid guid = Guid.Parse(id);
-        var result = await _lisam.GetSomethingFromLisam(guid);
-		return Ok(result);
-	}
+    [HttpGet]
+    public async Task<IActionResult> GetURL() {
+        var url = _urlservice.GetUrl();
+        return Ok(url);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> PutURL(DefaultDatatype body)
+    {
+        _urlservice.SetUrl(body.url);
+        return Ok();
+    }
 }
