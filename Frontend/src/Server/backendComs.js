@@ -17,6 +17,7 @@ export async function getURL() {
 
     const result = await resp.json();
     console.log(result);
+    return result.url;
 }
 
 export async function putURL(url) {

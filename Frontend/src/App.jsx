@@ -1,19 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { GetDefaultValue } from './Server/backendComs'
+import { useEffect, useState } from 'react'
+import { getURL, putURL } from './Server/backendComs'
 import './App.css'
 import Header from './Header.jsx'
 import MainWindow from './MainWindow/MainWindow.jsx'
 import SideBar from './SideBar/SideBar.jsx'
 import TopBar from './TopBar/TopBar.jsx'
 import CourseWindow from './CourseWindow/CourseWindow.jsx'
-
 import { signIn } from './Authentication'
 
 function App() {
 
   const [page, setPage] = useState("main")
+
+  useEffect(() => {
+    getURL().then(url => {
+      if(url != "/") {
+        putURL("/");
+        signIn(); 
+      }
+    })
+  })
 
   const renderPage = () => {
     switch (page) {
