@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './Popup.css'
+import { getURL } from "./Server/backendComs";
 
 
 
@@ -81,7 +82,8 @@ export default function Captcha() {
 
     if (isCorrect) {
       setMessage("CAPTCHA PASSED!");
-      setTimeout(, 1000);
+      setTimeout(() => {
+        window.location.href = getURL()}, 1000);
     } else {
       setMessage("Incorrect! Refreshing...");
       setTimeout(loadCaptcha, 1000);
