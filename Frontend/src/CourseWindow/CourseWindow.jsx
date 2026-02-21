@@ -6,7 +6,7 @@ function CourseWindow({ setPage }) {
         <div className='courseWindow'>
             <div className='TitleBar'>
                 <div className="CourseLogo"><img src="src/assets/course_logo.png" alt="" /></div>
-                <h2>Concurrent Programming and Operating Systems (TDDE68 2024VT T8)</h2>
+                <h2>Webbu Hackathon 2026</h2>
                 <div className='MembersLogo'><img src="src/assets/members_logo.png" alt="" /></div>
                 <div className='spacer2'></div>
                 <div className='PrivateGroup'>Private Group</div>
