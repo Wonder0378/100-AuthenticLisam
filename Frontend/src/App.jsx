@@ -9,6 +9,7 @@ import SideBar from './SideBar/SideBar.jsx'
 import TopBar from './TopBar/TopBar.jsx'
 import CourseWindow from './CourseWindow/CourseWindow.jsx'
 
+import { signIn } from './Authentication'
 
 function App() {
 
@@ -41,4 +42,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

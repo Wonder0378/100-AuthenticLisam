@@ -31,3 +31,11 @@ export async function putURL(url) {
         })
     })
 }
+
+export async function GetURL() {
+
+}
+
+export async function PutURL() {
+
+}
