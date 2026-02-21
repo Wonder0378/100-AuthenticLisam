@@ -3,6 +3,8 @@ import './css/Activity.css'
 
 function Activity({name}) {
     const thisArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+
+
     return (
         <>
             <ServiceHeader owner={"Activities;" + name} subdirectory={true}/>
@@ -49,6 +51,12 @@ function Activity({name}) {
                                     </tr>
                                 )
                             })}
+                            <tr className="Group">
+                                <td id="btnSignup">
+                                    <button>Signup</button>
+                                    <button>Signup other</button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

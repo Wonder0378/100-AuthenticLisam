@@ -3,7 +3,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddSingleton<LisamBase>(); // Or AddSingleton depending on your needs
+builder.Services.AddSingleton<UrlService>(); // Or AddSingleton depending on your needs
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddCors(options => {
