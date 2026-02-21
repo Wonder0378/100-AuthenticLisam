@@ -1,4 +1,4 @@
-using Lisam.Context;
+using Lisam;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

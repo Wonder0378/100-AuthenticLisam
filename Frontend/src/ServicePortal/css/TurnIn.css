@@ -1,0 +1,86 @@
+/* Grundinställningar */
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.TitleCard {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.title {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* Informationsrutan */
+.info-box {
+  background-color: #d9edf7;
+  border: 1px solid #bce8f1;
+  color: #31708f;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.info-icon {
+  background-color: #31708f;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-style: italic;
+  font-family: serif;
+  font-size: 12px;
+}
+
+/* Tabellen */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.submissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.submissions-table th {
+  padding: 12px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #555; /* Den mörka linjen i bilden */
+}
+
+.submissions-table .sortable {
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 5px;
+  color: #888;
+}
+
+.empty-row td {
+  padding: 20px;
+}

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Lisam.Context;
-using Lisam.Models;
+using Lisam;
+
 namespace Lisam.Controllers;
 
 [Route("api/lisam")]
