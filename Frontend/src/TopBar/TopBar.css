@@ -12,6 +12,7 @@
     color: black;
     align-items: center;
     margin-left: 1%;
+    cursor: pointer;
 }
 .textBoxesRight {
     color: black;

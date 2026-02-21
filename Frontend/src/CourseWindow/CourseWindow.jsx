@@ -51,9 +51,6 @@ function CourseWindow({ setPage }) {
                     </div>
                 </div>
             </div>
-            <button onClick={() => setPage("main")}>
-                                Go To New Window
-            </button>
         </div>
     );
     

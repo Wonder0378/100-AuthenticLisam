@@ -32,7 +32,7 @@ function App() {
       <div className='backgroundWindow'>
         <SideBar/>
         <div className="mainWindowAndTop">
-          <TopBar/>
+          <TopBar page={page} setPage={setPage}/>
           {renderPage()}
         </div>
         
