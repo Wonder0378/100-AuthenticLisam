@@ -1,0 +1,56 @@
+
+
+.ServiceHeader {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ServNavHeader {
+    height: 60%;
+    outline: 1px dotted red;
+    display: flex;
+    flex-direction: row;
+    background: #80dcf3;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 3rem;
+}
+
+.ServNavHeader {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.ServSubHeader {
+    height: 40%;
+    width: 100%;
+    background-color: #f3f2f1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 1rem;
+    color: black;
+    font-weight: light;
+    border: #e1dfdd 1px solid;
+}
+
+a {
+    color: black;
+    font-weight:400;
+}
+
+a:hover {
+    color: #337ab7;
+}
+
+
+#ServLiuLogo {
+    height: 5vh;
+}
+
+h3 {
+    color: black;
+}
