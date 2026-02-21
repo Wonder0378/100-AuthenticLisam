@@ -4,3 +4,11 @@ export async function GetDefaultValue(id) {
         console.log(data)
     })
 }
+
+export async function GetURL() {
+
+}
+
+export async function PutURL() {
+
+}

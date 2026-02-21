@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import './Popup.css'
 
+
+
 export default function Captcha() {
   const [targetCategory, setTargetCategory] = useState("");
   const [images, setImages] = useState([]);
@@ -79,6 +81,7 @@ export default function Captcha() {
 
     if (isCorrect) {
       setMessage("CAPTCHA PASSED!");
+      setTimeout(, 1000);
     } else {
       setMessage("Incorrect! Refreshing...");
       setTimeout(loadCaptcha, 1000);
