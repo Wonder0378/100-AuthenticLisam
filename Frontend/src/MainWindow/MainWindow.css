@@ -1,0 +1,139 @@
+.mainWindow {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+}
+
+.MainWindowBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    width:93%;
+    padding: 0 4%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.right {
+    align-items: center;
+    justify-content: center;
+}
+
+.language {
+  cursor: pointer;
+  font-size: 14px;
+  color: #444;
+}
+
+.language:hover {
+  color: #007c82;
+}
+.logo {
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.coursesAndNews {
+    padding-top: 1%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    height: 70%;
+    width: 80%;
+}
+
+.coursesAndPrograms {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width:60%;
+}
+
+.coursesAndProgramsTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    height: 10%;
+    color: black; 
+    border-bottom: 1px solid darkslategrey; 
+    align-items: center;
+}
+
+.leftPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+}
+
+.questionMark {
+    height:100%;
+    width:15%;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightPart {
+    display: flex;
+    color: darkgrey;
+    margin-right: 2%;
+}
+
+.courseObject {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid darkslategrey;
+    color: black;
+    background-color: #F0F9FA;
+}
+
+h4 {
+    padding-left: 5%;
+}
+
+h4:hover {
+    text-decoration: underline;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width:25%;
+}
+
+.spacer {
+    width: 2%;
+}
