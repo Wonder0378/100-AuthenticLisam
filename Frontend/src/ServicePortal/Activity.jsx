@@ -2,6 +2,7 @@ import ServiceHeader from "./ServiceHeader";
 import './css/Activity.css'
 
 function Activity({name}) {
+    const thisArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
     return (
         <>
             <ServiceHeader owner={"Activities;" + name} subdirectory={true}/>
@@ -31,10 +32,25 @@ function Activity({name}) {
                             <span className="label">Signups</span>
                             <p className="value">10 / 0</p>
                         </div>
-                        <div className="Group Column">
-
-                        </div>
                     </div>
+                    <table style={{width: "100%"}}>
+                        <thead className="group-header">
+                            <tr>
+                                <th style={{width: "30%"}}>Group</th>
+                                <th>Member Name</th>
+                            </tr>
+                        </thead>
+                        <tbody className="group-column">
+                            {thisArray.map(element => {
+                                return (
+                                    <tr className="Group">
+                                        <td style={{width: "30%"}}>{element}</td>
+                                        <td style={{width: "50%"}}>Someone idk</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </>

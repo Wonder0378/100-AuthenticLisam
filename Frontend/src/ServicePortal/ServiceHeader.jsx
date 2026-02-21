@@ -21,7 +21,7 @@ function ServiceHeader({ owner, subdirectory }) {
                 <a href="/">Start</a> /
                 <a href="/">Lisam</a> /
                 <a href="/">Your Course (TODO18 2026_VT_LP)</a> / 
-                <a href='/sign-up'>My {newOwner}</a>
+                <a href='/sign-up'>{newOwner}</a>
                 {subowner != "" ? (
                     <>/ <a href="">{subowner}</a></>
                 ) : (
