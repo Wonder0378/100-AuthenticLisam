@@ -3,16 +3,27 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { GetDefaultValue } from './Server/backendComs'
 import './App.css'
+import Header from './Header.jsx'
+import MainWindow from './MainWindow/MainWindow.jsx'
+import SideBar from './SideBar/SideBar.jsx'
+import TopBar from './TopBar/TopBar.jsx'
 
 function App() {
 
   const id = "3fa85f64-5717-4562-b3fc-2c963f66afa6";
 
   return (
-    <>
-      <h1>100% Authentic Lisam</h1>
-      <button onClick={() => GetDefaultValue(id)}>Click Me</button>
-    </>
+    <div>
+      <Header/>
+      <div className='backgroundWindow'>
+        <SideBar/>
+        <div className="mainWindowAndTop">
+          <TopBar/>
+          <MainWindow/>
+        </div>
+        
+      </div>
+    </div>
   )
 }
 
