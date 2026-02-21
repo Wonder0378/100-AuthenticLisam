@@ -67,3 +67,35 @@
   margin: 5px 0 0 0;
   font-size: 14px;
 }
+
+.group-header {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+}
+
+.group-header tr {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.group-header tr th {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.group-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.group-column .Group {
+    min-height: 50px;
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}

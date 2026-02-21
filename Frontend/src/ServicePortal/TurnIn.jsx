@@ -8,7 +8,7 @@ function TurnIn() {
         <div className="container">
             <div className="TitleCard">
                 <h1 className="title">My Assignments</h1>
-                <h2 className="subtitle">Very Important Course</h2>
+                <h2 className="subtitle">TODO18 2026_VT_LP</h2>
             </div>
 
             <div className="info-box">

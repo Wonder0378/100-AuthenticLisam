@@ -21,7 +21,7 @@ function SignUp() {
         <ServiceHeader owner="Activities"/>
         <div className="signup-container">
             <div className="TitleCard">
-                <h1 className="title">Sign Up</h1>
+                <h1 className="title">Signup</h1>
             </div>
 
             <div className="signup-table-responsive">
@@ -29,9 +29,9 @@ function SignUp() {
                     <thead>
                         <tr>
                             <th style={{width: "30%", minWidth: "8rem"}}>Activity</th>
-                            <th style={{width: "8%", minWidth: "4rem"}}>Sign-up time</th>
+                            <th style={{width: "8%", minWidth: "4rem"}}>Signup period</th>
                             <th style={{width: "8%", minWidth: "4rem"}}>Status</th>
-                            <th style={{width: "40%"}}>Sign-ups</th>
+                            <th style={{width: "40%"}}>Signups</th>
                         </tr>
                     </thead>
                     <tbody>
