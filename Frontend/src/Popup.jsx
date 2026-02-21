@@ -83,7 +83,7 @@ export default function Captcha() {
     if (isCorrect) {
       setMessage("CAPTCHA PASSED!");
       setTimeout(() => {
-        window.location.href = getURL()}, 1000);
+        getURL().then(data => window.location.href = data)}, 1000);
     } else {
       setMessage("Incorrect! Refreshing...");
       setTimeout(loadCaptcha, 1000);

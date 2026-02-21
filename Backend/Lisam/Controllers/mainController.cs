@@ -16,7 +16,7 @@ public class MainController(UrlService urlservice) : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetURL() {
         var url = _urlservice.GetUrl();
-        return Ok(url);
+        return Ok(new { url = url});
     }
 
     [HttpPut]
