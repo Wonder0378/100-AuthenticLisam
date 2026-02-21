@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { GetDefaultValue } from './Server/backendComs'
 import './App.css'
+import Header from './Header'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <>
+      <Header/>
       <h1>100% Authentic Lisam</h1>
       <button onClick={() => GetDefaultValue(id)}>Click Me</button>
     </>

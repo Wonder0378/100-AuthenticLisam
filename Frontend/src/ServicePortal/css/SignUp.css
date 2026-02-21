@@ -1,0 +1,77 @@
+/* Grundinställningar */
+.signup-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.title {
+    font-weight: 350;
+}
+
+/* Tabellen */
+.signup-table-responsive {
+  overflow-x: auto;
+}
+
+.signup-table {
+  width: 100%;
+  text-align: left;
+}
+
+.signup-table thead tr, .signup-table tbody tr{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.signup-table tbody tr:hover {
+    background: #68c1da2d;
+}
+
+.signup-table thead tr th{
+    font-weight: 400;
+}
+
+.signup-table tbody tr th{
+    font-weight: 500;
+}
+
+.signup-table tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-table th {
+  padding: 12px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.signup-table thead th {
+    margin-bottom: -15px;
+}
+
+.signup-table .sortable {
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 5px;
+  color: #888;
+}
+
+.empty-row td {
+    height: 5%;
+    padding: 20px;
+}
+
+th a {
+    color: #2975d2aa;
+}
+
+th a:hover {
+    text-decoration: underline;
+}

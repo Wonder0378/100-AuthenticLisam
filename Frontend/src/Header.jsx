@@ -6,8 +6,8 @@ function Header() {
         <div>
             <nav className="NavHeader">
                 <Link to="/">Lisam</Link>{" "}
-                <Link to="/Courses">Courses</Link>
-                <Link to="/Resources">Resources</Link>
+                <Link to="/sign-up">Sign Up</Link>
+                <Link to="/turn-in">Turn In</Link>
             </nav>
         </div>
     )
