@@ -96,6 +96,7 @@ export default function Captcha() {
   }, []);
 
   return (
+    <div id="Captchabody">
     <div className="captcha-card">
       <div className="captcha-header">
         <h2>
@@ -126,6 +127,7 @@ export default function Captcha() {
         <button onClick={loadCaptcha}>🔄</button>
         <button onClick={verifyCaptcha}>Verify</button>
       </div>
+    </div>
     </div>
   );
 }

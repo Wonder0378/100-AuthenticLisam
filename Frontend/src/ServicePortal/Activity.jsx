@@ -1,24 +1,30 @@
 import ServiceHeader from "./ServiceHeader";
-import { useEffect } from "react";
-import { getURL, putURL } from './../Server/backendComs'
+import { useEffect, useState } from "react";
+import { getRegistered, getURL, putURL, Register, UnRegister } from './../Server/backendComs'
 import { signIn } from './../Authentication'
 import './css/Activity.css'
+import { useNavigate } from "react-router-dom";
 
 function Activity({name}) {
-    const thisArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+    const thisArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    const [reg, setReg] = useState({name : "", group : -1})
+    const navigate = useNavigate();
     useEffect(() => {
-    getURL().then(url => {
-        if(name == "Hackathon") {
-            if(url != "/sign-up/Hackathon") {
-                putURL("/sign-up/Hackathon");
-                signIn(); 
+        getURL().then(url => {
+            if(name == "Hackathon") {
+                if(url != "/sign-up/Hackathon") {
+                    putURL("/sign-up/Hackathon");
+                    signIn(); 
+                }
+            } else {
+                if(url != "/sign-up/Alexander") {
+                    putURL("/sign-up/Alexander");
+                    signIn(); 
+                }
             }
-        } else {
-            if(url != "/sign-up/Alexander") {
-                putURL("/sign-up/Alexander");
-                signIn(); 
-            }
-        }
+        })
+        getRegistered().then(registered => {
+            setTimeout(() => setReg(registered), 1000);
         })
     })
     return (
@@ -68,12 +74,20 @@ function Activity({name}) {
                                     </tr>
                                 )
                             })}
-                            <tr className="Group">
-                                <td id="btnSignup">
-                                    <button>Signup</button>
-                                    <button>Signup other</button>
-                                </td>
-                            </tr>
+                            {reg.group == -1 ? (
+                                <tr className="Group">
+                                    <td id="btnSignup">
+                                        <button onClick={() => {Register();navigate("/spec");}}>Signup</button>
+                                        <button>Signup other</button>
+                                    </td>
+                                </tr>
+                            ) : (
+                                <tr className="Group">
+                                    <td style={{width: "30%"}}>{reg.group}</td>
+                                    <td style={{width: "50%"}}>{reg.name}</td>
+                                    <td><button id="Remove" onClick={() => {UnRegister();}}>Remove Me</button></td>
+                                </tr>
+                            )}
                         </tbody>
                     </table>
                 </div>

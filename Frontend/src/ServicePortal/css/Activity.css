@@ -119,3 +119,14 @@
     justify-content: center;
     text-align: center;
 }
+
+#Remove {
+    background-color: rgba(255, 0, 0, 0.729);
+    color: white;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0;
+}
