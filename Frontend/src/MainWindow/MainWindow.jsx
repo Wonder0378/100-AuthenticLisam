@@ -1,3 +1,4 @@
+import { signIn } from '../Authentication';
 import './MainWindow.css'
 import { useNavigate } from "react-router-dom"
 
@@ -37,7 +38,7 @@ function MainWindow({ setPage}) {
                     <div className="courseObject">
                         <h4>TDDE68 - Concurrent programming and Operating Systems</h4>
                     </div>
-                    <div onClick={() => setPage("course")} className="courseObject">
+                    <div onClick={() => {setPage("course")}} className="courseObject">
                         <h4>Haka26 - Webbu Hackathon 2026</h4>
                     </div>
                 </div>

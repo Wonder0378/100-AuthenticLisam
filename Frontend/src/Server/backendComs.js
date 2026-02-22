@@ -1,13 +1,4 @@
-
-export async function GetDefaultValue(id) {
-    const resp = await fetch(`/api/lisam/${id}`);
-    if(!resp.ok) {
-        console.log("Error")
-    }
-
-    const result = await resp.json();
-    console.log(result);
-}
+import { signIn } from "../Authentication";
 
 export async function getURL() {
     const resp = await fetch(`/api/lisam`);
@@ -33,10 +24,41 @@ export async function putURL(url) {
     })
 }
 
-export async function GetURL() {
-
+export async function Register() {
+    fetch('/api/register', {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            group: 10,
+            name: "100% Authentic Lisam",
+        })
+    })
 }
 
-export async function PutURL() {
+export async function UnRegister() {
+    fetch('/api/register', {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            group: -1,
+            name: "",
+        })
+    })
+}
 
+export async function getRegistered() {
+    const resp = await fetch(`/api/register`);
+    if(!resp.ok) {
+        console.log("Error")
+    }
+
+    const result = await resp.json();
+    console.log(result);
+    return {group : result.group, name : result.name};
 }
