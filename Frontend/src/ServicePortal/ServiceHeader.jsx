@@ -20,7 +20,7 @@ function ServiceHeader({ owner, subdirectory }) {
             <div className='ServSubHeader'>
                 <a href="/">Start</a> /
                 <a href="/">Lisam</a> /
-                <a href="/">Your Course (TODO18 2026_VT_LP)</a> / 
+                <a href="/">Your Course (Haka26 - Webbu Hackathon 2026)</a> / 
                 <a href='/sign-up'>{newOwner}</a>
                 {subowner != "" ? (
                     <>/ <a href="">{subowner}</a></>
